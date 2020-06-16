@@ -38,23 +38,10 @@ function getOperator(operator,resultBeforeEvent,resultAfterEvent){
   const calcDescription = `${resultBeforeEvent} ${operator} ${resultAfterEvent}`;
   outputResult(currentResult,calcDescription)
 }
-// creating eventListener for every event and passing operator 
-function subtract(){
-  const enteredNumber = getUserInputValue();
-  const initialValue = currentResult ;
-  currentResult = enteredNumber + initialValue;
-  getOperator('-', initailValue ,enteredNumber)
-}
+// shortcuts for operator
+currentResult = currentResult + userInput.value;
+  // replace it by
+  currentResult += userInput.value;
 
-function multiply(){
-  const enteredNumber = getUserInputValue();
-  const initialValue = currentResult ;
-  currentResult = enteredNumber * initialValue;
-  getOperator('*', initailValue ,enteredNumber)
-}
-function multiply(){
-  const enteredNumber = getUserInputValue();
-  const initialValue = currentResult ;
-  currentResult = enteredNumber / initialValue;
-  getOperator('/', initailValue ,enteredNumber)
-}
+  currentResult = currentResult + 1;
+  currentResult++
