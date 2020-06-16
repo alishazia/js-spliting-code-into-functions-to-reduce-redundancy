@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+	<style>
+		.calci-results {
+			background-color: yellowgreen;
+
+		}
+
+		/* implementing line break using backtick and css property */
+		h2 {
+			white-space: pre;
+		}
+
+		.calc-main {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.button-style {
+			font-size: 50px;
+			color: red;
+		}
+
+		.current-calc {
+			margin-left: 20px;
+		}
+
+		.calc-section {
+			display: flex;
+			color: #000;
+			font-family: "#lato";
+			font-size: 20px;
+			margin: 5%;
+		}
+
+		body {
+			font-family: 'Tangerine', serif;
+			font-size: 28px;
+			color: blue;
+			background: cyan;
+			padding: 3%;
+		}
+
+		input {
+			size: 30px;
+			padding: 20px;
+			margin-bottom: 25px;
+		}
+
+		button {
+			size: 30px;
+			padding: 20px;
+		}
+	</style>
+	<title> Creating a calacutor </title>
+</head>
+
+<body>
+	<header>
+		<section>
+			Calculator
+		</section>
+	</header>
+	<section id="calculator" class="calc-main">
+		<input type="number" id="input-number"/>
+		<div id="calc-actions">
+			<button type="button" id="add-btn" class="button-style">+</button>
+			<button type="button" id="sub-btn" class="button-style">-</button>
+			<button type="button" id="mul-btn" class="button-style">*</button>
+			<button type="button" id="div-btn" class="button-style">/</button>
+		</div>
+	</section>
+	<section id="results" class="calci-results">
+		<h2 id="current-calculation">0</h2>
+		<h2>Result: <span id="current-result">0</span></h2>
+	</section>
+    	<!-- <script src="index.js"></script> -->
+</body>
+	<!-- <script src="assets/app.js" ></script>
+	<script src="assets/vendor.js"></script> -->
+	<!-- <script src="index.js" type="text/javascript"></script> -->
+</html>
