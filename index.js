@@ -17,15 +17,44 @@ currentResult = currentResult + (10 * 2) + 12 / 2;
 let currentDescription = '(10 * 2) + 12/2';
 
 function add() {
-  const calcDescription = getUserInputValue();
-  currentResult = `currentResult + calcDescription`;
-  outputResult(currentResult, calcDescription);
+  const enteredNumber = getUserInputValue();
+  const initialValue = currentResult ;
+  currentResult = enteredNumber - initialValue;
+ getOperator('+', initailValue ,enteredNumber)
 }
 
 // errors because addEventListener is called before html page is loaded
 // addBtn.addEventListener('click', add);
+// subtractBtn.addEventListener('click', subtract);
+// multiplyBtn.addEventListener('click', multiply);
+// divideBtn.addEventListener('click', divide);
 
 // splitting code into functions
 function getUserInputValue(){
   return parseInt(userInput.value);
+}
+
+function getOperator(operator,resultBeforeEvent,resultAfterEvent){
+  const calcDescription = `${resultBeforeEvent} ${operator} ${resultAfterEvent}`;
+  outputResult(currentResult,calcDescription)
+}
+// creating eventListener for every event and passing operator 
+function subtract(){
+  const enteredNumber = getUserInputValue();
+  const initialValue = currentResult ;
+  currentResult = enteredNumber + initialValue;
+  getOperator('-', initailValue ,enteredNumber)
+}
+
+function multiply(){
+  const enteredNumber = getUserInputValue();
+  const initialValue = currentResult ;
+  currentResult = enteredNumber * initialValue;
+  getOperator('*', initailValue ,enteredNumber)
+}
+function multiply(){
+  const enteredNumber = getUserInputValue();
+  const initialValue = currentResult ;
+  currentResult = enteredNumber / initialValue;
+  getOperator('/', initailValue ,enteredNumber)
 }
