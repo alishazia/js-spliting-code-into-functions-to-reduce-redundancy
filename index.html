@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 
-<head> 
+<head>
+	<script src="assets/vendor.js" defer></script>
+	<script src="assets/app.js" defer></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 	<style>
 		.calci-results {
@@ -9,7 +11,7 @@
 
 		}
 
-		/* implementing line break using backtic and css property */
+		/* implementing line break using backtick and css property */
 		h2 {
 			white-space: pre;
 		}
@@ -58,8 +60,7 @@
 	</style>
 	<title> Creating a calacutor </title>
 </head>
-<script src="assets/app.js" defer></script>
-	<script src="assets/vendor.js" defer></script>
+
 <body>
 	<header>
 		<section>
@@ -67,20 +68,21 @@
 		</section>
 	</header>
 	<section id="calculator" class="calc-main">
-		<input type="number" id="input-number"/>
+		<input type="number" id="input-number" />
 		<div id="calc-actions">
-			<button type="button" id="add-btn" class="button-style">+</button>
-			<button type="button" id="sub-btn" class="button-style">-</button>
-			<button type="button" id="mul-btn" class="button-style">*</button>
-			<button type="button" id="div-btn" class="button-style">/</button>
+			<button type="button" id="btn-add" class="button-style">+</button>
+			<button type="button" id="btn-subtract" class="button-style">-</button>
+			<button type="button" id="btn-multiply" class="button-style">*</button>
+			<button type="button" id="btn-divide" class="button-style">/</button>
 		</div>
 	</section>
-  <script src="assets/app.js" defer></script>
-	<script src="assets/vendor.js" defer></script>
 	<section id="results" class="calci-results">
 		<h2 id="current-calculation">0</h2>
 		<h2>Result: <span id="current-result">0</span></h2>
 	</section>
-	<!-- <script src="index.js" type="text/javascript"></script>  -->
 </body>
+<!-- <script src="assets/app.js" ></script>
+	<script src="assets/vendor.js"></script> -->
+<!-- <script src="index.js" type="text/javascript"></script> -->
+
 </html>
