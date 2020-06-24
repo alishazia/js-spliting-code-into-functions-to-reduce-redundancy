@@ -4,3 +4,4 @@ let choosenMaxLife =100;
 
 adjustHealthBars(choosenMaxLife);
 
+ 
